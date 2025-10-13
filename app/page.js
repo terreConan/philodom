@@ -6,6 +6,7 @@ import Link from "next/link";
 import politicsImg from "../components/imgs/politics.jpg";
 import chatImg from "/components/imgs/chat.png"
 import styles from "./page.module.css";
+import { Analytics } from "@vercel/analytics/next"
 
 export default function BrandGuidelines() {
   return (
@@ -14,6 +15,7 @@ export default function BrandGuidelines() {
 
       <div className={styles.mainColumn}>
         <Header />
+        <Analytics />
 
         <main className={styles.content}>
           <h1 className={styles.title}>Philosophy + Freedom</h1>
