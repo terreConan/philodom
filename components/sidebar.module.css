@@ -1,0 +1,59 @@
+/* components/Sidebar.module.css */
+
+.sidebar {
+    width: 250px;
+    padding: 2rem 1.7rem;
+    border-right: 1px solid #eee;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    background-color: #fff;
+    color: #333;
+
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    overflow-y: auto;
+    overscroll-behavior: contain;
+  }
+  
+  
+  .sidebar .logo {
+    font-weight: bold;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+  }
+  
+  /* now this rule contains the local class .sidebar → it’s “pure” */
+  .sidebar nav ul {
+    list-style: none;
+    padding: 0;
+  }
+
+  .divider {
+    width: calc(100% + 3.75rem);
+    height: 1px;
+    background-color: #e0e0e0;
+    margin: 2rem 0;
+    margin-inline: -2rem;
+  }
+  
+  .sidebar nav li + li {
+    margin-top: 0.75rem;
+  }
+  
+  .sidebar nav a {
+    text-decoration: none;
+    color: #333;
+    font-size: 1rem;
+  }
+  
+  .sidebar .bottom a {
+    display: block;
+    color: #666;
+    font-size: 0.9rem;
+    margin-top: 1rem;
+  }
+  

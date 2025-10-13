@@ -1,0 +1,106 @@
+.container {
+  display: flex;
+  min-height: 100vh;
+  font-family: system-ui, sans-serif;
+  color: #333;
+  align-items: flex-start;
+
+  background-color: #fff;
+}
+
+/* Left sidebar */
+.mainColumn {
+  flex: 1;
+  margin-left: 250px;
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+}
+
+/* Content area under the header */
+.content {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  padding: 2rem;
+  gap: 2rem;
+  align-items: start;
+  background-color: #fff;
+}
+
+.title {
+  font-size: 3rem;
+  margin: 0;
+  line-height: 1.1;
+}
+
+.body p {
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.divider {
+  width: calc(100% + 2rem);
+  height: 1px;
+  background-color: #e0e0e0;
+  margin-bottom: 2rem;
+  margin-top: 1rem;
+}
+
+.split {
+  grid-template-columns: 1.2fr 2fr; /* image ~37%, text ~63% */
+  align-items: center;
+}
+
+/* Image container on the left */
+.media {
+  position: relative;
+  width: clamp(220px, 26vw, 360px);
+  aspect-ratio: 3 / 4.5;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 12px 28px rgba(0,0,0,.12), 0 6px 12px rgba(0,0,0,.06);
+  background: #f3f3f3;           /* fallback while loading */
+}
+
+.splitRight {
+  grid-template-columns: 2fr 1.2fr;   /* ~63% text, ~37% image */
+  align-items: center;
+  gap: 2rem;                          /* keeps nice breathing room */
+}
+
+/* right-side image box */
+.mediaRight {
+  position: relative;
+  width: clamp(320px, 42vw, 680px);   /* shrink/grow responsively */
+  aspect-ratio: 2.02 / 1;              /* your portrait ratio */
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 12px 28px rgba(0,0,0,.12), 0 6px 12px rgba(0,0,0,.06);
+  background: #f3f3f3;
+  justify-self: end;                  /* hug the right edge of its column */
+}
+
+.cta {
+  display: block;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  text-decoration: none;
+  width:50%;
+  margin: 0 auto 5rem;
+
+  background: #fff;
+  color: #0f172a;               /* slate-900 */
+  border: 1px solid rgba(0,0,0,.08);
+  border-radius: 14px;          /* squarer than a pill */
+  padding: .85rem 1.15rem;
+
+  font-weight: 700;
+  font-size: clamp(.95rem, 1.6vw, 1.05rem);
+  text-transform: uppercase;
+  letter-spacing: .06em;        /* nicer tracking for caps */
+
+  box-shadow: 0 10px 20px rgba(0,0,0,.12), 0 6px 6px rgba(0,0,0,.08);
+  transition: transform .08s ease, box-shadow .2s, background-color .2s, color .2s;
+}
