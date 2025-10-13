@@ -129,7 +129,7 @@ export default function ChatPage() {
   }
 
   // sentence-bounded snippet or current selection
-  function useAsFollowUp(index) {
+  function followUpFromMessage(index) {
     const bubble = document.getElementById(`bubble-${index}`);
     let selected = "";
     const sel = window.getSelection?.();
@@ -268,7 +268,7 @@ export default function ChatPage() {
                         <button
                           type="button"
                           className={styles.actionBtn}
-                          onClick={() => useAsFollowUp(i)}
+                          onClick={() => followUpFromMessage(i)}
                           aria-label="Use as follow-up"
                           title="Use as follow-up"
                         >

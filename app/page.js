@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 import Sidebar from "../components/sidebar";
 import Header from "../components/header";
 import Image from "next/image";
