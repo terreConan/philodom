@@ -18,9 +18,6 @@ export default function Sidebar() {
           <li><Link href="/chat">Beta Mode</Link></li>
         </ul>
       </nav>
-      <div className={styles.bottom}>
-        <a href="/contact">Contact Us</a>
-      </div>
     </aside>
   );
 }
